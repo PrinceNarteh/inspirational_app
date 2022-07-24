@@ -17,7 +17,18 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromRGBO(244, 243, 242, 1),
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        systemOverlayStyle: SystemUiOverlayStyle.light,
+        elevation: 0,
+        leading: IconButton(
+          icon: Icon(
+            Icons.menu,
+            color: Colors.black87,
+          ),
+          onPressed: () {},
+        ),
+      ),
       body: const Center(
         child: Text("Inspirational App"),
       ),
