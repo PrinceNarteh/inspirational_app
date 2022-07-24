@@ -29,8 +29,63 @@ class HomeScreen extends StatelessWidget {
           onPressed: () {},
         ),
       ),
-      body: const Center(
-        child: Text("Inspirational App"),
+      body: SafeArea(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Container(
+              width: double.infinity,
+              decoration: const BoxDecoration(
+                  color: Colors.white,
+                  borderRadius:
+                      BorderRadius.vertical(bottom: Radius.circular(20))),
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  const Text(
+                    "Find Your",
+                    style: TextStyle(
+                      color: Colors.black87,
+                      fontSize: 25,
+                    ),
+                  ),
+                  const SizedBox(height: 3),
+                  const Text(
+                    "Inspiration",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 40,
+                    ),
+                  ),
+                  const SizedBox(height: 20),
+                  Container(
+                    padding: const EdgeInsets.all(5.0),
+                    decoration: BoxDecoration(
+                      color: const Color.fromRGBO(244, 233, 233, 1),
+                      borderRadius: BorderRadius.circular(5),
+                    ),
+                    child: const TextField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        prefixIcon: Icon(
+                          Icons.search,
+                          color: Colors.black87,
+                        ),
+                        hintText: "Search what you're looking for",
+                        hintStyle: TextStyle(
+                          color: Colors.grey,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
