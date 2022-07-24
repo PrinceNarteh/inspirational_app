@@ -3,9 +3,9 @@ import 'package:flutter/services.dart';
 
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomeScreen(),
+      home: HomeScreen(),
     ),
   );
 }
@@ -22,7 +22,7 @@ class HomeScreen extends StatelessWidget {
         systemOverlayStyle: SystemUiOverlayStyle.light,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.menu,
             color: Colors.black87,
           ),
