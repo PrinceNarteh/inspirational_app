@@ -4,9 +4,10 @@ import 'package:inspiration_app/widgets/promo_card.dart';
 
 void main() {
   runApp(
-    const MaterialApp(
+    MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+      theme: ThemeData(fontFamily: "Roboto"),
+      home: const HomeScreen(),
     ),
   );
 }
@@ -58,9 +59,9 @@ class HomeScreen extends StatelessWidget {
                     const Text(
                       "Inspiration",
                       style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 40,
-                      ),
+                          color: Colors.black,
+                          fontSize: 40,
+                          fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 20),
                     Container(
